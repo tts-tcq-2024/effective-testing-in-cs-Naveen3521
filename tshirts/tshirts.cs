@@ -13,9 +13,10 @@ namespace TshirtSpace {
             }
         }
         static void Main(string[] args) {
-            Debug.Assert(Size(37) == "S");
-            Debug.Assert(Size(40) == "M");
-            Debug.Assert(Size(43) == "L");
+            Debug.Assert(Size(37) == "S");// valid
+            Debug.Assert(Size(40) == "M");// valid
+            Debug.Asser(Size(38)=="M");// Edge Case Added (Should return M but it is not handled)
+            Debug.Assert(Size(43) == "L");// valid
             Console.WriteLine( "All is well (maybe!)");
         }
     }
